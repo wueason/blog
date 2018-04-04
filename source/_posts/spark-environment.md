@@ -1,7 +1,7 @@
 ---
 title: Spark环境搭建
 date: 2018-04-04 09:22:42
-tags: 环境搭建
+tags: [Spark,环境搭建]
 ---
 
 ## Spark环境搭建
