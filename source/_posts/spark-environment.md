@@ -29,7 +29,8 @@ tags: [Spark,环境搭建]
 #### python3
 + `curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"`
 + `python3 get-pip.py`
-+ sudo pip install ipython
++ `sudo pip install ipython`
++ 或者是直接`sudo apt install python3-pip`，然后`sudo pip3 install ipython`。
 
 #### Java 1.8
 + `sudo apt-get update`
@@ -46,12 +47,13 @@ tags: [Spark,环境搭建]
 + `tar zxvf spark-2.3.0-bin-without-hadoop.tgz`
 + `sudo mv spark-2.3.0-bin-without-hadoop /usr/local/spark`
 + `sudo chown vagrant /usr/local/spark`
-+ 在文件`/usr/local/spark/conf/spark-env.sh`文件开头增加:`export SPARK_DIST_CLASSPATH=$(/path/to/hadoop/bin/hadoop classpath)`
++ 在文件`/usr/local/spark/conf/spark-env.sh`文件开头增加:`export SPARK_DIST_CLASSPATH=$(/usr/local/hadoop/bin/hadoop classpath)`
 
 #### PATH
 + `vi ~/.bashrc`，添加以下代码
     ```
 export PYSPARK_DRIVER_PYTHON=ipython
+export JAVA_HOME=/usr/lib/jvm/default-java
 export HADOOP_HOME=/usr/local/hadoop
 export SPARK_HOME=/usr/local/spark
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
