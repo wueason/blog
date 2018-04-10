@@ -27,10 +27,12 @@ tags: [Spark,环境搭建]
 + `vagrant ssh`
 
 #### python3
-+ `curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"`
-+ `python3 get-pip.py`
-+ `sudo pip install ipython`
-+ 或者是直接`sudo apt install python3-pip`，然后`sudo pip3 install ipython`。
++ ~~`curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"`~~
++ ~~`python3 get-pip.py`~~
++ ~~`sudo pip install ipython`~~
++ `sudo apt install python3-pip`
++ `sudo pip3 install ipython`
++ `sudo pip3 install numpy`
 
 #### Java 1.8
 + `sudo apt-get update`
