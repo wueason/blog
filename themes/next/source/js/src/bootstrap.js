@@ -50,3 +50,28 @@ $(document).ready(function () {
 
   $(document).trigger('bootstrap:after');
 });
+
+// 增加版权信息
+function addCopyright() {
+    //Get the selected text and append the extra info
+    var selection = window.getSelection(),
+        pagelink = '<br /><br /> 作者：EasonWu (eason991@gmail.com) <br /> 链接：' + document.location.href + 
+                   '<br /> 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。',
+        copytext = selection + pagelink,
+        newdiv = document.createElement('div');
+
+    //hide the newly created container
+    newdiv.style.position = 'absolute';
+    newdiv.style.left = '-99999px';
+
+    //insert the container, fill it with the extended text, and define the new selection
+    document.body.appendChild(newdiv);
+    newdiv.innerHTML = copytext;
+    selection.selectAllChildren(newdiv);
+
+    window.setTimeout(function () {
+        document.body.removeChild(newdiv);
+    }, 100);
+}
+
+document.addEventListener('copy', addCopyright);
