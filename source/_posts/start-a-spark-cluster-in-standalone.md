@@ -8,7 +8,7 @@ tags:
 
 ### Spark集群的工作原理
 
-![alt text](images/cluster-overview.png "cluster overview")
+![集群工作原理](images/cluster-overview.png "集群工作原理")
 
 `SparkContext`可以连接到几种类型的集群管理器(`Cluster Managers`), 一旦连接，Spark就会获取集群中节点(`Worker Node`)上的执行者(`Executor`)，这些执行者是运行计算并为应用程序存储数据的进程。 然后，它将写好的应用程序代码（JAR包或Python文件）发送给执行者。 最后，SparkContext发送任务给执行者运行。
 

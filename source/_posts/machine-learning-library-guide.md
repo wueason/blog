@@ -18,10 +18,11 @@ Spark的MLlib，其目标是让机器学习实践更加简单且具可扩展性�
 
 值得注意的是，进入了Spark2.0版本之后，spark.mllib中基于RDD的API（ RDD-based APIs）也进入了维护模式，取而代之的是spark.ml中基于DataFrame的API（DataFrame-based API）。
 
-![alt text](images/RDD-DataFrame.jpg "RDD-DataFrame")
+![RDD-DataFrame](images/RDD-DataFrame.jpg "RDD-DataFrame")
 
 ### 依赖
 
 + 线性代数库`Breeze`
 + 基础线性代数子程序库[`Intel MKL`](https://software.intel.com/en-us/mkl)或[`OpenBLAS`](http://www.openblas.net/)
 + `NumPy >=1.4`
+
