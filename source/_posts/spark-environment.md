@@ -61,7 +61,7 @@ export SPARK_HOME=/usr/local/spark
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.6-src.zip:$PYTHONPATH
 export PYSPARK_PYTHON=python3
-export PATH=$HADOOP_HOME/bin:$SPARK_HOME/bin:/usr/local/hadoop/sbin:/usr/local/hadoop/bin:$PATH
+export PATH=$HADOOP_HOME/bin:$SPARK_HOME/bin:$HADOOP_HOME/sbin:$PATH
     ```
 
 ### Spark 初体验
