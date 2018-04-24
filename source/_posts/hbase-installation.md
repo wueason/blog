@@ -1,5 +1,5 @@
 ---
-title: Hbase安装
+title: 分布式数据库HBase
 date: 2018-04-23 15:11:43
 tags: [Hadoop,Hbase]
 ---
@@ -20,7 +20,7 @@ HBase是一个高可靠性、高性能、面向列、可伸缩的分布式存储
 + `sudo apt-get update`
 + `sudo apt-get install -y default-jre default-jdk`
 
-### Hbase 1.3.2
+### HBase 1.3.2
 + `wget http://mirrors.hust.edu.cn/apache/hbase/1.3.2/hbase-1.3.2-bin.tar.gz`
 + `tar zxvf hbase-1.3.2-bin.tar.gz`
 + `sudo mv hbase-1.3.2 /usr/local/hadoop/hbase`
@@ -29,8 +29,8 @@ HBase是一个高可靠性、高性能、面向列、可伸缩的分布式存储
 ### PATH
 + `vi ~/.bashrc`，添加以下代码
     ```
-export JAVA_HOME=/usr/lib/jvm/default-java
-export HBASE_HOME=/usr/local/hadoop/hbase
+	export JAVA_HOME=/usr/lib/jvm/default-java
+	export HBASE_HOME=/usr/local/hadoop/hbase
     ```
 
 ### 单机模式安装
@@ -38,7 +38,6 @@ export HBASE_HOME=/usr/local/hadoop/hbase
 + 配置文件
 
 	- hbase-site.xml：
-
 	```
 	<configuration>
 	  <property>

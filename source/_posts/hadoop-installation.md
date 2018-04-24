@@ -23,8 +23,8 @@ tags: [Hadoop]
 ### PATH
 + `vi ~/.bashrc`，添加以下代码
     ```
-export JAVA_HOME=/usr/lib/jvm/default-java
-export HADOOP_HOME=/usr/local/hadoop
+	export JAVA_HOME=/usr/lib/jvm/default-java
+	export HADOOP_HOME=/usr/local/hadoop
     ```
 
 ### Hadoop目前支持的集群模式
