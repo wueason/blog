@@ -4,8 +4,6 @@ date: 2018-04-04 09:22:42
 tags: [Spark,环境搭建]
 ---
 
-## Spark环境搭建
-
 ### 目标：
 + 搭建Spark环境
 + 写出第一个Spark程序并运行。
@@ -17,7 +15,7 @@ tags: [Spark,环境搭建]
 + Spark 2.1.0
 + Hadoop 2.7.5
 
-#### ubuntu 16.04
+### ubuntu 16.04
 + 基于[vagrant](https://www.vagrantup.com/)
 + `vagrant box add ubuntu/xenial https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box`
 + `vagrant init ubuntu/xenial`
@@ -26,7 +24,7 @@ tags: [Spark,环境搭建]
 + `vagrant up`
 + `vagrant ssh`
 
-#### python3
+### python3
 + ~~`curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"`~~
 + ~~`python3 get-pip.py`~~
 + ~~`sudo pip install ipython`~~
@@ -34,24 +32,24 @@ tags: [Spark,环境搭建]
 + `sudo pip3 install ipython`
 + `sudo pip3 install numpy`
 
-#### Java 1.8
+### Java 1.8
 + `sudo apt-get update`
 + `sudo apt-get install -y default-jre default-jdk`
 
-#### Hadoop 2.7.5
+### Hadoop 2.7.5
 + `wget http://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-2.7.5/hadoop-2.7.5.tar.gz`
 + `tar zxvf hadoop-2.7.5.tar.gz`
 + `sudo mv hadoop-2.7.5 /usr/local/hadoop`
 + `sudo chown vagrant /usr/local/hadoop`
 
-#### Spark 2.3.0
+### Spark 2.3.0
 + `wget https://www.apache.org/dyn/closer.lua/spark/spark-2.3.0/spark-2.3.0-bin-without-hadoop.tgz`
 + `tar zxvf spark-2.3.0-bin-without-hadoop.tgz`
 + `sudo mv spark-2.3.0-bin-without-hadoop /usr/local/spark`
 + `sudo chown vagrant /usr/local/spark`
 + 在文件`/usr/local/spark/conf/spark-env.sh`文件开头增加:`export SPARK_DIST_CLASSPATH=$(/usr/local/hadoop/bin/hadoop classpath)`
 
-#### PATH
+### PATH
 + `vi ~/.bashrc`，添加以下代码
     ```
 export PYSPARK_DRIVER_PYTHON=ipython

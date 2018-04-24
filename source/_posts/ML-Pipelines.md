@@ -4,8 +4,6 @@ date: 2018-04-12 15:28:47
 tags: [工作流,Pipelines]
 ---
 
-## ML工作流（Pipelines）
-
 ### ML工作流（Pipelines）中的一些概念
 
 + DataFrame：使用Spark SQL中的DataFrame作为数据集，它可以容纳各种数据类型。 DataFrame中的列可以是存储的文本，特征向量，真实标签和预测标签等。
@@ -32,15 +30,15 @@ PipeLine本身也是一个Estimator。因而，在工作流的`fit()`方法运�
 
 在上图中，PipelineModel具有与原始Pipeline相同的阶段数，但是原始Pipeline中的所有估计器Estimators都变为变换器Transformers。当在测试数据集上调用PipelineModel的`transform()`方法时，数据按顺序通过拟合的管道。每个阶段的transform()方法更新数据集并将其传递到下一个阶段。Pipelines和PipelineModels有助于确保训练数据集和测试数据集通过相同的特征处理步骤。
 
-### 代码示例
-
-#### 理解Estimator，Transformer和Param
+### 理解Estimator，Transformer和Param
 
 相关API ：[`Estimator`](http://spark.apache.org/docs/latest/api/python/pyspark.ml.html#pyspark.ml.Estimator)，[`Transformer`](http://spark.apache.org/docs/latest/api/python/pyspark.ml.html#pyspark.ml.Transformer)，[`Params`](http://spark.apache.org/docs/latest/api/python/pyspark.ml.html#pyspark.ml.param.Params)
 
 ```python
 from pyspark.ml.linalg import Vectors
 from pyspark.ml.classification import LogisticRegression
+
+spark = SparkSession.builder.master("local").appName("Estimator-Transformer-Param").getOrCreate()
 
 # 准备训练数据集(label, features)元组
 training = spark.createDataFrame([
@@ -96,7 +94,7 @@ for row in result:
 
 可参考[`examples/src/main/python/ml/estimator_transformer_param_example.py`](https://github.com/apache/spark/tree/v2.3.0/examples/src/main/python/ml/estimator_transformer_param_example.py)
 
-#### Pipeline
+### Pipeline
 
 相关API ：[`Pipeline`](http://spark.apache.org/docs/latest/api/python/pyspark.ml.html#pyspark.ml.Pipeline)
 

@@ -4,8 +4,6 @@ date: 2018-04-07 17:12:16
 tags:
 ---
 
-## 搭建一个最简单的Spark集群
-
 ### Spark集群的工作原理
 
 ![集群工作原理](images/cluster-overview.png "集群工作原理")
