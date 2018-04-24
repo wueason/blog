@@ -28,11 +28,11 @@ export HADOOP_HOME=/usr/local/hadoop
     ```
 
 ### Hadoop目前支持的集群模式
-+ 本地模式安装
++ 单机模式安装
 + 伪分布式模式安装
 + 完全分布式安装
 
-### 本地模式安装
+### 单机模式安装
 + `mkdir input`
 + `cp etc/hadoop/*.xml input`
 + `bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.6.jar grep input output 'dfs[a-z.]+'`
