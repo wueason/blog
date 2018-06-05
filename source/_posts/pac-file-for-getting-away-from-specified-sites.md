@@ -46,6 +46,6 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-# 把PAC文件上传到网络上，且保证我们能直接访问到该文件。如果你有GitHub账号，你可以直接在你的项目中上传该文件。
++ 把PAC文件上传到网络上，且保证我们能直接访问到该文件。如果你有GitHub账号，你可以直接在你的项目中上传该文件。
 
-# 在浏览器插件（如`SwitchySharp`）中，或者是在WIFI链接时的代理设置->自动选项中，填入我们上传的地址（我们的场景是`https://github.com/oobspark/oobspark.github.io/blob/master/files/filter.pac`）。
++ 在浏览器插件（如`SwitchySharp`）中，或者是在WIFI链接时的代理设置->自动选项中，填入我们上传的地址（我们的场景是`https://github.com/oobspark/oobspark.github.io/blob/master/files/filter.pac`）。
