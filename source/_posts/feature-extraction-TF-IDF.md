@@ -62,4 +62,4 @@ rescaledData.select("label", "features").show()
 
 可参考[`examples/src/main/python/ml/word2vec_example.py`](https://github.com/apache/spark/tree/v2.3.0/examples/src/main/python/ml/word2vec_example.py)
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
