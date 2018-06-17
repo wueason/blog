@@ -1,6 +1,6 @@
 ---
 title: 使用Python OpenCV提取图片中的特定物体
-date: 2018-06-14 09:41:12
+date: 2018-06-17 09:41:12
 tags: [opencv,python,图像物体识别]
 ---
 
