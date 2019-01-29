@@ -68,18 +68,18 @@ mysql -h192.168.99.100 -uroot -p123123 -e "status"
 docker run --name php-fpm --link mysql:mysql -p 9000:9000 \
     -v $PWD/html:/var/www/html:ro -d php:7.1-fpm
 ```
+```
+    --name php-fpm：
+        自定义容器名
 
-    + --name php-fpm：
-        + 自定义容器名
+    --link mysql:mysql
+        与mysql容器关联，并将mysql容器的域名指定为mysql
 
-    + --link mysql:mysql
-        + 与mysql容器关联，并将mysql容器的域名指定为mysql
-
-    + -v $PWD/www:/var/www/html:ro
-        + `$PWD/www`是宿主机的php文件目录
-        + `/var/www/html`是容器内php文件目录
-        + `ro`表示只读。
-
+    -v $PWD/www:/var/www/html:ro
+        `$PWD/www`是宿主机的php文件目录
+        `/var/www/html`是容器内php文件目录
+        `ro`表示只读。
+```
 官方docker中已经包含的PHP的部分基本扩展，但是很显然这并不能满足大多数的使用场景。
 
 因此，官方还提供了`docker-php-ext-configure`，`docker-php-ext-install`和
@@ -122,17 +122,17 @@ docker run --name nginx -p 80:80 --link php-fpm:php \
     -d nginx:1.15
 ```
 
-    + --name nginx：
-        + 自定义容器名
+    --name nginx：
+       自定义容器名
 
-    + --link php-fpm:php
-        + 与php-fpm容器关联，并将php-fpm容器的域名指定为php
+    --link php-fpm:php
+       与php-fpm容器关联，并将php-fpm容器的域名指定为php
 
-    + -v $PWD/default_host.conf:/etc/nginx/conf.d/default.conf:ro
-        + 替换host文件
+    -v $PWD/default_host.conf:/etc/nginx/conf.d/default.conf:ro
+       替换host文件
 
-    + -v $PWD/html:/usr/share/nginx/html:ro \
-        + 替换网站根目录
+    -v $PWD/html:/usr/share/nginx/html:ro \
+       替换网站根目录
 
 + 总结
 
