@@ -93,7 +93,7 @@ favicon: /favicon.ico
 
 # Avatar (put the image into next/source/images/)
 # can be any image format supported by web browsers (JPEG,PNG,GIF,SVG,..)
-avatar: /default_avatar.png
+avatar: /images/avatar.jpg
 
 # Code highlight theme
 # available: normal | night | night eighties | night blue | night bright
