@@ -33,7 +33,7 @@ Docker CE（Community Edition）社区版本本身支持多种平台的安装，
 我们先把三个镜像下载到本地备用。打开`Docker Quickstart Terminal`，并执行：
 
 ```bash
-docker pull amd64/nginx:1.15
+docker pull nginx:1.15
 docker pull php:7.1-fpm
 docker pull mariadb:10.3
 ```
