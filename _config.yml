@@ -74,6 +74,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+cnzz_siteid: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -93,7 +94,7 @@ favicon: /favicon.ico
 
 # Avatar (put the image into next/source/images/)
 # can be any image format supported by web browsers (JPEG,PNG,GIF,SVG,..)
-avatar: /images/avatar.jpg
+avatar: /default_avatar.png
 
 # Code highlight theme
 # available: normal | night | night eighties | night blue | night bright
