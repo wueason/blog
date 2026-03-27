@@ -80,7 +80,7 @@ cnzz_siteid: true
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:oobspark/oobspark.github.io.git
+  repo: https://oobspark:@github.com/oobspark/oobspark.github.io.git
   branch: master
 
 social:
